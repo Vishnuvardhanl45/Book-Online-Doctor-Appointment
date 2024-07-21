@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Doctor Details</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    form {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    label, input {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        background-color: #363535;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #d32f2f;
+    }
+</style>
+</head>
+<body>
+    <form action="DeleteDoctorDetailsServlet" method="post">
+        <h2>Delete Doctor Details</h2>
+        <div>
+            <label for="doctor-id">Enter Doctor ID/Mobile Number:</label>
+            <input type="text" id="doctor-id" name="doctor-id" placeholder="Enter Doctor ID/Mobile No">
+        </div>
+
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Patient Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            padding: 40px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Update Patient Details</h2>
+        <form action="UpdatePatientDetailsServlet" method="post">
+            <div class="form-group">
+                <label for="patient-id">Patient ID:</label>
+                <input type="text" class="form-control" id="patient-id" name="patient-id" placeholder="Enter Patient ID" required>
+            </div>
+            <div class="form-group">
+                <label for="patient-name">Patient Name:</label>
+                <input type="text" class="form-control" id="patient-name" name="patient-name" placeholder="Enter Patient Name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" placeholder="Enter Age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone-number" name="phone-number" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="form-group">
+                <label for="disease">Disease:</label>
+                <input type="text" class="form-control" id="disease" name="disease" placeholder="Enter Disease" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Update</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay Payment</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; margin-top: 20vh; padding: 0; background-color: #f4f4f4;">
+
+    <div style="width: 50%; margin: 50px auto; padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+
+        <h1 style="font-size: 32px; margin-bottom: 20px; color: #333; text-align: center;">Razorpay Payment</h1>
+
+        <form action="PaymentServlet" method="post" style="width: 100%;">
+
+            <label for="patientName" style="display: block; margin-bottom: 5px; font-size: 16px;">Patient Name:</label>
+            <input type="text" id="patientName" name="patientName" required style="width: 100%; margin-bottom: 10px; padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+
+            <label for="phoneNumber" style="display: block; margin-bottom: 5px; font-size: 16px;">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required style="width: 100%; margin-bottom: 10px; padding: 8px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+
+            <input type="submit" value="Pay" style="width: 100%; padding: 8px; font-size: 16px; background-color: #007bff; color: #ffffff; border: none; border-radius: 4px; cursor: pointer;">
+
+        </form>
+
+    </div>
+
+</body>
+</html>

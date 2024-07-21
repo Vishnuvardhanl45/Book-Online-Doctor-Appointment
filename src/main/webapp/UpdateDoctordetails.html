@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Doctor Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+            padding: 40px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Update Doctor Details</h2>
+        <form action="UpdateDoctordetailsServlet" method="post">
+            <div class="form-group">
+                <label for="doctor-id">Doctor ID:</label>
+                <input type="text" class="form-control" id="doctor-id" name="doctor-id" placeholder="Enter Doctor ID" required>
+            </div>
+            <div class="form-group">
+                <label for="doctor-name">Doctor Name:</label>
+                <input type="text" class="form-control" id="doctor-name" name="doctor-name" placeholder="Enter Doctor Name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone-number" name="phone-number" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email ID" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+            </div>
+            <div class="form-group">
+                <label for="specialization">Specialization:</label>
+                <select class="form-control" id="specialization" name="specialization" required>
+                    <option value="" disabled selected>Select Specialization</option>
+                    <option value="General Physician">General Physician</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Dermatologist">Dermatologist</option>
+                    <option value="Endocrinologist">Endocrinologist</option>
+                    <option value="Gastroenterologist">Gastroenterologist</option>
+                    <option value="Hematologist">Hematologist</option>
+                    <option value="Nephrologist">Nephrologist</option>
+                    <option value="Neurologist">Neurologist</option>
+                    <option value="Obstetrician/Gynecologist">Obstetrician/Gynecologist (OB/GYN)</option>
+                    <option value="Oncologist">Oncologist</option>
+                    <option value="Ophthalmologist">Ophthalmologist</option>
+                    <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
+                    <option value="Otolaryngologist">Otolaryngologist (ENT)</option>
+                    <option value="Pediatrician">Pediatrician</option>
+                    <option value="Psychiatrist">Psychiatrist</option>
+                    <option value="Pulmonologist">Pulmonologist</option>
+                    <option value="Radiologist">Radiologist</option>
+                    <option value="Rheumatologist">Rheumatologist</option>
+                    <option value="Surgeon">Surgeon</option>
+                    <option value="Urologist">Urologist</option>
+                    <option value="Anesthesiologist">Anesthesiologist</option>
+                </select>
+                
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Update</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

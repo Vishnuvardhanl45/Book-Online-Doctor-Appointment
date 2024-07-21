@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Hospital</display-name>
+  <welcome-file-list>
+    <welcome-file>WelcomePage.html</welcome-file> 
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>AddPatientServlet</servlet-name>
+    <servlet-class>com.example.hospital.AddPatientServlet</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>AddPatientServlet</servlet-name>
+    <url-pattern>/AddPatientServlet</url-pattern>
+  </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewPatientServlet</servlet-name>
+        <servlet-class>com.example.hospital.ViewPatientServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewPatientServlet</servlet-name>
+        <url-pattern>/ViewPatientServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ViewPatientDetailsServlet</servlet-name>
+        <servlet-class>com.example.hospital.ViewPatientDetailsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewPatientDetailsServlet</servlet-name>
+        <url-pattern>/ViewPatientDetailsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewDoctorServlet</servlet-name>
+        <servlet-class>com.example.hospital.ViewDoctorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewDoctorServlet</servlet-name>
+        <url-pattern>/ViewDoctorServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+ 
+
+    <servlet>
+        <servlet-name>BookAppointmentServlet</servlet-name>
+        <servlet-class>com.example.hospital.BookAppointmentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BookAppointmentServlet</servlet-name>
+        <url-pattern>/BookAppointmentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+     <servlet-name>ViewAppointmentsServlet</servlet-name>
+     <servlet-class>com.example.hospital.ViewAppointmentsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewAppointmentsServlet</servlet-name>
+        <url-pattern>/ViewAppointmentsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.example.hospital.RegisterServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+</servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.example.hospital.LoginServlet</servlet-class> 
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.example.hospital.LogoutServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <servlet-class>com.example.hospital.AdminLogoutServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>AdminLogoutServlet</servlet-name>
+    <url-pattern>/AdminLogoutServlet</url-pattern>
+</servlet-mapping>
+
+
+<filter>
+    <filter-name>CacheControlFilter</filter-name>
+    <filter-class>com.example.hospital.CacheControlFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>CacheControlFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+
+
+<filter>
+        <filter-name>AdminSessionFilter</filter-name>
+        <filter-class>com.example.hospital.AdminSessionFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AdminSessionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>LoginServletViaPhoneno</servlet-name>
+        <servlet-class>com.example.hospital.LoginServletViaPhoneno</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServletViaPhoneno</servlet-name>
+        <url-pattern>/LoginServletViaPhoneno</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServletViaEmail</servlet-name>
+        <servlet-class>com.example.hospital.LoginServletViaEmail</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServletViaEmail</servlet-name>
+        <url-pattern>/LoginServletViaEmail</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <servlet-class>com.example.hospital.AdminLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServlet</servlet-name>
+        <url-pattern>/AdminLoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminLoginServletViaPhoneno</servlet-name>
+        <servlet-class>com.example.hospital.AdminLoginServletViaPhoneno</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServletViaPhoneno</servlet-name>
+        <url-pattern>/AdminLoginServletViaPhoneno</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminLoginServletViaEmail</servlet-name>
+        <servlet-class>com.example.hospital.AdminLoginServletViaEmail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminLoginServletViaEmail</servlet-name>
+        <url-pattern>/AdminLoginServletViaEmail</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <servlet-class>com.example.hospital.ResetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <url-pattern>/ResetPasswordServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddPatientDetails</servlet-name>
+        <servlet-class>com.example.hospital.AddPatientDetails</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddPatientDetails</servlet-name>
+        <url-pattern>/AddPatientDetails</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddDoctorDetailsServlet</servlet-name>
+        <servlet-class>com.example.hospital.AddDoctorDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddDoctorDetailsServlet</servlet-name>
+        <url-pattern>/AddDoctorDetailsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteDoctorDetailsServlet</servlet-name>
+        <servlet-class>com.example.hospital.DeleteDoctorDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteDoctorDetailsServlet</servlet-name>
+        <url-pattern>/DeleteDoctorDetailsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UpdateDoctordetailsServlet</servlet-name>
+        <servlet-class>com.example.hospital.UpdateDoctordetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateDoctordetailsServlet</servlet-name>
+        <url-pattern>/UpdateDoctordetailsServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DeletePatientDetailsServlet</servlet-name>
+        <servlet-class>com.example.hospital.DeletePatientDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeletePatientDetailsServlet</servlet-name>
+        <url-pattern>/DeletePatientDetailsServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UpdatePatientdetailsServlet</servlet-name>
+        <servlet-class>com.example.hospital.UpdatePatientdetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdatePatientdetailsServlet</servlet-name>
+        <url-pattern>/UpdatePatientdetailsServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+    <servlet-name>PaymentSuccessServlet</servlet-name>
+    <servlet-class>com.example.hospital.PaymentSuccessServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>PaymentSuccessServlet</servlet-name>
+    <url-pattern>/paymentSuccess</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>paymentformedicineservlet</servlet-name>
+    <servlet-class>com.example.hospital.Paymentformedicineservlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>paymentformedicineservlet</servlet-name>
+    <url-pattern>/paymentformedicineservle</url-pattern>
+</servlet-mapping>
+
+
+
+
+
+
+    <servlet>
+        <servlet-name>OtpVerificationServlet</servlet-name>
+        <servlet-class>com.example.hospital.OtpVerificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OtpVerificationServlet</servlet-name>
+        <url-pattern>/OtpVerificationServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PaymentServlet</servlet-name>
+        <servlet-class>com.example.hospital.PaymentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PaymentServlet</servlet-name>
+        <url-pattern>/PaymentServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+
+

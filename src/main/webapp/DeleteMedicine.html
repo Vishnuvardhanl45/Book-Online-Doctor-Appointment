@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Medicine</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0;">
+<div class="container">
+    <h1 class="mt-5">Delete Medicine</h1>
+    <form action="DeleteMedicineServlet" method="post" style="background-color: #f2f2f2; padding: 20px; border-radius: 5px;">
+        <div class="form-group">
+            <label for="medicineName">Medicine Name:</label>
+            <input type="text" class="form-control" id="medicineName" name="medicineName" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Delete Medicine</button>
+    </form>
+</div>
+</body>
+</html>

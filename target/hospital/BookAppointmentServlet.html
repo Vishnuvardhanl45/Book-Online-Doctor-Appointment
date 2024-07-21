@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Appointment System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="submit"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/hospital/LogoutServlet">
+                        <span class="fas fa-sign-out-alt"></span> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Container -->
+    <div class="container">
+        <h1>Welcome to the Hospital Management System</h1>
+        <h2>Book an Appointment</h2>
+        <form action="BookAppointmentServlet" method="post">
+            <label for="patientid">Patient ID:</label>
+            <input type="text" id="patientid" name="patientid" required>
+            <label for="doctorid">Doctor ID:</label>
+            <input type="text" id="doctorid" name="doctorid" required>
+            <label for="appointmentdate">Appointment Date:</label>
+            <input type="date" id="appointmentdate" name="appointmentdate" min="<%= today %>" required>
+            <label for="timeslot">Time Slot:</label>
+            <select id="timeslot" name="timeslot" required style="width: 100%; padding: 8px;">
+                <option value="">Select a time slot</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="10:00 AM">11:00 AM</option>
+                <option value="10:00 AM">12:00 PM</option>
+                <option value="10:00 AM">02:00 PM</option>
+                <option value="10:00 AM">03:00 PM</option>
+                <option value="10:00 AM">04:00 PM</option>
+            </select>
+            <br>
+            <input type="submit" value="Check Availability">
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
